@@ -12,5 +12,8 @@ namespace Task_WebAndCloud.Data
 
         Task<Post> DeleteProductAsync(int postID);
 
+        IQueryable<User> Users { get; }
+
+        Task<User> DeleteUserAsync(string Email);
     }
 }

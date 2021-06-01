@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\Task_WebAndCloud\\Task_WebAndCloud.csproj": {}
+    "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\EntrepreneurPlatform\\Task_WebAndCloud\\Task_WebAndCloud.csproj": {}
   },
   "projects": {
-    "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\Task_WebAndCloud\\Task_WebAndCloud.csproj": {
+    "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\EntrepreneurPlatform\\Task_WebAndCloud\\Task_WebAndCloud.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\Task_WebAndCloud\\Task_WebAndCloud.csproj",
+        "projectUniqueName": "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\EntrepreneurPlatform\\Task_WebAndCloud\\Task_WebAndCloud.csproj",
         "projectName": "Task_WebAndCloud",
-        "projectPath": "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\Task_WebAndCloud\\Task_WebAndCloud.csproj",
+        "projectPath": "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\EntrepreneurPlatform\\Task_WebAndCloud\\Task_WebAndCloud.csproj",
         "packagesPath": "C:\\Users\\catal\\.nuget\\packages\\",
-        "outputPath": "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\Task_WebAndCloud\\obj\\",
+        "outputPath": "D:\\Facultate\\1. Master\\Semestrul 2\\06. Web and Cloud\\.NET\\EntrepreneurPlatform\\Task_WebAndCloud\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\catal\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -43,6 +43,10 @@
             "BCrypt.Net-Next": {
               "target": "Package",
               "version": "[4.0.2, )"
+            },
+            "Joonasw.AspNetCore.SecurityHeaders": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",

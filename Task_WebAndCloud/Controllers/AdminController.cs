@@ -26,8 +26,7 @@ namespace Task_WebAndCloud.Controllers
         }
 
         public async Task<IActionResult> Index()
-        {
-            // get user who posted 
+        { 
             return View(postsRepository.Posts);
         }
 
@@ -42,6 +41,7 @@ namespace Task_WebAndCloud.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Post post)
         {
             if (ModelState.IsValid)
@@ -71,6 +71,7 @@ namespace Task_WebAndCloud.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int postId)
         {
             Post postForDelete = await postsRepository.DeleteProductAsync(postId);
@@ -84,7 +85,20 @@ namespace Task_WebAndCloud.Controllers
 
         public IActionResult SeeUsers()
         {
-            return View("SeeUsers", postsRepository.Posts);
+            return View("SeeUsers", postsRepository.Users);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> DeleteUser(string Email)
+        {
+            User userForDelete = await postsRepository.DeleteUserAsync(Email);
+            if (userForDelete != null)
+            {
+                TempData["message"] = $"{userForDelete.Email} was deleted";
+            }
+
+            return RedirectToAction("Index");
         }
     }
 }

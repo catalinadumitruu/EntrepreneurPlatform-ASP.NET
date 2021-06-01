@@ -27,6 +27,7 @@ namespace Task_WebAndCloud.Controllers
             _userManager = userManager;
             currentUserID = httpContextAccessor.HttpContext.User.FindFirst(ClaimTypes.NameIdentifier).Value;
         }
+
         public IActionResult Index(int postPage = 1)
         {
             var viewModel = new PostsListViewModel
@@ -83,6 +84,7 @@ namespace Task_WebAndCloud.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Post post)
         {
             if (ModelState.IsValid)
@@ -118,6 +120,7 @@ namespace Task_WebAndCloud.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public async Task<IActionResult> Delete(int postId)
         {
             Post postForDelete = await postsRepository.DeleteProductAsync(postId);

@@ -11,7 +11,7 @@
            asp-route-postId="@Model.PostId">
             Edit
         </a>
-        <form asp-action="Delete" asp-route-postId="@Model.PostId"
+        <form asp-antiforgery="true" asp-action="Delete" asp-route-postId="@Model.PostId"
               method="post" style="display: inline">
             <input type="hidden" name="ProductId" value="@Model.PostId" />
             <button type="submit" class="btn btn-danger btn-sm">

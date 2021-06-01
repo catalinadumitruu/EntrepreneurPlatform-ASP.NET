@@ -9,7 +9,7 @@
    @if(!User.IsInRole("Admin")){
 	    @: disabled
      }
-   " >Add Product</a>
+   ">Have something to day? Add a post!</a>
 
 <table class="table table-striped table-bordered table-sm">
     <tr>
@@ -29,13 +29,13 @@
     <td class="text-right">@post.Category</td>
     <td class="text-right">@post.PostingDate</td>
     <td class="text-right">@post.Content</td>
-    <td class="text-right">@ViewBag.CurrentUserEmail</td>
+    <td class="text-right">@post.UserEmail</td>
     <td class="text-center">
         <a asp-action="Edit" class="btn btn-sm btn-warning"
            asp-route-postId="@post.PostId">
             Edit
         </a>
-        <form asp-action="Delete" asp-route-postId="@post.PostId"
+        <form asp-action="Delete" asp-route-postId="@post.PostId" asp-antiforgery="true"
               method="post" style="display: inline">
             <input type="hidden" name="ProductId" value="@post.PostId" />
             <button type="submit" class="btn btn-danger btn-sm">

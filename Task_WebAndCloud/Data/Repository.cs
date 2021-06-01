@@ -23,6 +23,14 @@ namespace Task_WebAndCloud.Data
             }
         }
 
+        public IQueryable<User> Users
+        {
+            get
+            {
+                return context.Users;
+            }
+        }
+
         public async Task SavePostAsync(Post post)
         {
             if (post.PostId == 0)
@@ -53,6 +61,21 @@ namespace Task_WebAndCloud.Data
             if (dbEntry != null)
             {
                 context.Posts.Remove(dbEntry);
+                await context.SaveChangesAsync();
+            }
+            Console.WriteLine("Deleted");
+            return dbEntry;
+        }
+
+        public async Task<User> DeleteUserAsync(string Email)
+        {
+            Console.WriteLine("About to delete user with email " + Email);
+            User dbEntry = context.Users
+            .Where(u => u.Email == Email).FirstOrDefault();
+
+            if (dbEntry != null)
+            {
+                context.Users.Remove(dbEntry);
                 await context.SaveChangesAsync();
             }
             Console.WriteLine("Deleted");
