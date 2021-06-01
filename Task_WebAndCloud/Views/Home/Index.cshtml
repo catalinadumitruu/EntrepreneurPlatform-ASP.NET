@@ -1,0 +1,29 @@
+﻿@model PostsListViewModel
+
+@{
+    ViewBag.Title = "All Posts";
+    Layout = "_Layout";
+}
+<div class="bg-dark text-white p-2">
+    <span class="navbar-brand ml-2">Entrepreneur's network</span>
+    <div class="float-right">
+       <partial name="_LoginPartial" />
+    </div>
+</div>
+
+<div class="container-fluid">
+    @if (TempData["message"] != null)
+    {
+        <div class="alert alert-info">
+            <strong>@TempData["message"]</strong>
+        </div>
+    }
+</div>
+<h1 class="text-center">Hello, welcome to my platform!</h1>
+<div class="text-center">
+    <img src="./pic/welcome.jpg" class="rounded" width="400" height="400">
+</div>
+
+<div page-class="btn" page-class-normal="btn-outline-dark"
+     page-class-selected="btn-primary" class="btn-group pull-right m-1">
+</div>

@@ -1,0 +1,22 @@
+﻿@model Post
+
+<tr>
+    <td class="text-right">@Model.PostId</td>
+    <td>@Model.Title</td>
+    <td class="text-right">@Model.Category</td>
+    <td class="text-right">@Model.PostingDate</td>
+    <td class="text-right">@Model.Content</td>
+    <td class="text-center">
+        <a asp-action="Edit" class="btn btn-sm btn-warning"
+           asp-route-postId="@Model.PostId">
+            Edit
+        </a>
+        <form asp-action="Delete" asp-route-postId="@Model.PostId"
+              method="post" style="display: inline">
+            <input type="hidden" name="ProductId" value="@Model.PostId" />
+            <button type="submit" class="btn btn-danger btn-sm">
+                Delete
+            </button>
+        </form>
+    </td>
+</tr>

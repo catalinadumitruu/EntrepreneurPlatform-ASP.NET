@@ -1,0 +1,47 @@
+﻿@using Task_WebAndCloud.Models
+@model Post
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "_AdminLayout";
+}
+
+<h1>Edit product</h1>
+<hr />
+
+<form asp-action="Edit
+      @if(!User.IsInRole("Admin")){
+	    @: disabled
+     }">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="PostId" />
+    <div class="form-group">
+        <label asp-for="Title" class="control-label"></label>
+        <input asp-for="Title" class="form-control" value="@Model.Title" />
+        <span asp-validation-for="Title" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Content" class="control-label"></label>
+        <input asp-for="Content" class="form-control" value="@Model.Content" />
+        <span asp-validation-for="Content" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Category" class="control-label"></label>
+        <input asp-for="Category" class="form-control" value="@Model.Category" />
+        <span asp-validation-for="Category" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="PostingDate" class="control-label"></label>
+        <input asp-for="PostingDate" class="form-control" placeholder="@Model.PostingDate" readonly />
+        <span asp-validation-for="PostingDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserEmail" class="control-label"></label>
+        <input asp-for="UserEmail" class="form-control" placeholder="@ViewBag.CurrentUserEmail" readonly />
+        <span asp-validation-for="UserEmail" class="text-danger"></span>
+    </div>
+    <div>
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
+    </div>
+</form>
