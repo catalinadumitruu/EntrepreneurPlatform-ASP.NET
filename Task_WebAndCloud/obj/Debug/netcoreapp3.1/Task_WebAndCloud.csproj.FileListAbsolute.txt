@@ -132,6 +132,7 @@ D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\T
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\Task_WebAndCloud.Views.pdb
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\BCrypt.Net-Next.dll
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\Humanizer.dll
+D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\Joonasw.AspNetCore.SecurityHeaders.dll
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
@@ -193,7 +194,6 @@ D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\T
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\obj\Debug\netcoreapp3.1\Task_WebAndCloud.csprojAssemblyReference.cache
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\obj\Debug\netcoreapp3.1\Task_WebAndCloud.AssemblyInfoInputs.cache
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\obj\Debug\netcoreapp3.1\Task_WebAndCloud.AssemblyInfo.cs
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\obj\Debug\netcoreapp3.1\Task_WebAndCloud.csproj.CoreCompileInputs.cache
@@ -238,4 +238,3 @@ D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\T
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\obj\Debug\netcoreapp3.1\Task_WebAndCloud.dll
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\obj\Debug\netcoreapp3.1\Task_WebAndCloud.pdb
 D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\obj\Debug\netcoreapp3.1\Task_WebAndCloud.genruntimeconfig.cache
-D:\Facultate\1. Master\Semestrul 2\06. Web and Cloud\.NET\EntrepreneurPlatform\Task_WebAndCloud\bin\Debug\netcoreapp3.1\Joonasw.AspNetCore.SecurityHeaders.dll

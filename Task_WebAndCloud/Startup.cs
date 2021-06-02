@@ -1,4 +1,4 @@
-using Joonasw.AspNetCore.SecurityHeaders;
+
 using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System;
+using System.Net;
 using System.Threading.Tasks;
 using Task_WebAndCloud.Data;
 using Task_WebAndCloud.Models;
@@ -49,15 +50,23 @@ namespace Task_WebAndCloud
 
             services.AddScoped<IPostsRepository, Repository>();
 
+            services.AddHttpsRedirection(options =>
+            {
+                options.RedirectStatusCode = (int)HttpStatusCode.TemporaryRedirect;
+                options.HttpsPort = 5001;
+            });
+
             services.AddHsts(options =>
             {
                 options.Preload = true;
                 options.IncludeSubDomains = true;
-                options.MaxAge = TimeSpan.FromDays(365);
+                options.MaxAge = TimeSpan.FromDays(60);
+                options.ExcludedHosts.Add("example.com");
+                options.ExcludedHosts.Add("www.example.com");
             });
 
             services.Configure<CookiePolicyOptions>(options =>
-            { 
+            {
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
@@ -84,21 +93,22 @@ namespace Task_WebAndCloud
             {
                 app.UseDeveloperExceptionPage();
             }
-          
-            app.UseStatusCodePages();
-            app.UseStaticFiles();
-
-            app.UseRouting();
 
             app.UseHttpsRedirection();
-            app.UseHsts(new HstsOptions
+            app.UseHsts();
+           /* app.UseHsts(new HstsOptions
             {
                 Duration = TimeSpan.FromDays(365),
                 IncludeSubDomains = true,
                 Preload = true
-            });
-            app.UseCookiePolicy();
+            });*/
 
+            app.UseStatusCodePages();
+            app.UseStaticFiles();
+
+            app.UseRouting();
+            
+            app.UseCookiePolicy();
 
             app.UseAuthentication();
             app.UseAuthorization();
